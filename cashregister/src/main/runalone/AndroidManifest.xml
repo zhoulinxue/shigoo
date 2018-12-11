@@ -16,11 +16,9 @@
     <application
         android:name=".runalone.App"
         android:allowBackup="true"
-        android:icon="@mipmap/cashregister_home_pic_logo"
         android:label="@string/cashregister_app_name"
-        android:roundIcon="@mipmap/cashregister_home_pic_logo"
         android:supportsRtl="true"
-        android:theme="@style/cashregister_AppTheme"
+        android:theme="@style/AppTheme"
         tools:replace="android:theme,android:label">
         <activity
             android:name=".activitys.CashRigisterMainActivity"
@@ -35,7 +33,6 @@
         <activity android:name=".activitys.SellerSearchActivity" />
         <activity
             android:name=".activitys.AddAndUpdateMemberActivity"
-            android:theme="@style/cashregister_translucent"
             android:windowSoftInputMode="adjustResize|stateHidden" />
     </application>
 

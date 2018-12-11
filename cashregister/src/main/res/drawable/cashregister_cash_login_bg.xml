@@ -5,8 +5,8 @@
             <corners android:radius="4px" />
             <gradient
                 android:angle="90"
-                android:endColor="@color/cashregister_cash_login_edit_end_color"
-                android:startColor="@color/cashregister_cash_login_edit_start_color" />
+                android:endColor="#2E3237"
+                android:startColor="#3D4249" />
         </shape>
     </item>
 </selector>

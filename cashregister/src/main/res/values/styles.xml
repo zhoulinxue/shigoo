@@ -1,11 +1,11 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="cashregister_AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
-        <item name="cashregister_colorPrimary">@color/colorPrimary</item>
-        <item name="cashregister_colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="cashregister_colorAccent">@color/colorAccent</item>
+        <item name="cashregister_colorPrimary">@color/cashregister_colorPrimary</item>
+        <item name="cashregister_colorPrimaryDark">@color/cashregister_colorPrimaryDark</item>
+        <item name="cashregister_colorAccent">@color/cashregister_colorAccent</item>
     </style>
 
     <style name="cashregister_dialog_round_corner" parent="android:style/Theme.Dialog">
@@ -21,7 +21,7 @@
 
     <style name="cashregister_translucent" parent="Theme.AppCompat.NoActionBar">
         　　　　
-        <item name="cashregister_android:windowBackground">@color/black_08</item>
+        <item name="cashregister_android:windowBackground">@color/cashregister_black_08</item>
         　　　　
         <item name="cashregister_android:windowIsTranslucent">true</item>
 

@@ -26,6 +26,10 @@ allprojects {
         maven { url 'https://maven.google.com' }
     }
 }
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
 def supportVersion = "27.1.1"
 def rxJavaVersion = "1.0.17"
 def rxAndroidVersion = "1.0.1"

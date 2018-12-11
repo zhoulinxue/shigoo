@@ -4,9 +4,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 
 import com.zx.api.api.app.MvpDialog;
-import com.zx.api.api.utils.SPUtil;
 import com.zx.mvplibrary.presenter.BasePresenter;
-import com.zx.network.Param;
 
 
 /**
