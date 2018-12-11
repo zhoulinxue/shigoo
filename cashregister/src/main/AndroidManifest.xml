@@ -1,0 +1,10 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.xgsb.cashregister">
+    <application
+        android:allowBackup="true" android:label="@string/cashregister_app_name"
+        tools:replace="android:label"
+        android:supportsRtl="true">
+
+    </application>
+</manifest>

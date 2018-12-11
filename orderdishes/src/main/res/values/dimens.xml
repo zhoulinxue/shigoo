@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="ordedishes_splash_center">18dp</dimen>
+    <dimen name="ordedishes_login_margin_top">106dp</dimen>
+    <dimen name="ordedishes_login_margin_left">515px</dimen>
+    <dimen name="ordedishes_main_margin_left">450px</dimen>
+    <dimen name="ordedishes_login_edite_hight">40dp</dimen>
+    <dimen name="ordedishes_login_edite_marginTop">48dp</dimen>
+    <dimen name="ordedishes_login_edite_size">14sp</dimen>
+    <dimen name="ordedishes_cash_login_btn_size">18sp</dimen>
+    <dimen name="ordedishes_10dp">10dp</dimen>
+    <dimen name="ordedishes_40dp">40dp</dimen>
+
+</resources>

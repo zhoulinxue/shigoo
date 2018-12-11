@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="menber_tab_title">
+        <item>Menbers</item>
+        <item>Recharge details</item>
+        <item>Consumer details</item>
+        <item>Interests Setting</item>
+    </string-array>
+</resources>

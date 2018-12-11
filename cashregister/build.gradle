@@ -1,0 +1,62 @@
+apply plugin: 'com.dd.comgradle'
+apply plugin: 'com.jakewharton.butterknife'
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [host: "cashregister"]
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            // 调式模式
+            debuggable false
+            // 不显示Log
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            // 混淆
+            minifyEnabled false
+            // Zipalign优化
+            zipAlignEnabled true
+            // 移除无用的resource文件
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            // 调式模式
+            debuggable true
+            // 不显示Log
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            // 混淆
+            minifyEnabled false
+            // Zipalign优化
+            zipAlignEnabled true
+            // 移除无用的resource文件
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField "String", "API_HOST", rootProject.ext.apiHost.debugHost
+        }
+    }
+    resourcePrefix "cashregister_"
+}
+combuild {
+    applicationName = 'com.xgsb.cashregister.runalone.App'
+    isRegisterCompoAuto = true;
+}
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    testImplementation 'junit:junit:4.12'
+    implementation project(':mvplibrary')
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
+    annotationProcessor 'io.starteos:dappsdk-compiler:1.0.5.fix.2'
+    annotationProcessor rootProject.ext.jimu
+}

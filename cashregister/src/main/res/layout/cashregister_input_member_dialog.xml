@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cashregister_white"
+    android:orientation="horizontal">
+
+    <com.xgsb.cashregister.wedgit.ClearableEditTextWithIcon
+        android:id="@id/cashregister_member_input_edite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/cashregister_margin_40dp"
+        android:layout_weight="4"
+        android:background="@drawable/cashregister_member_search_edit_bg"
+        android:hint="请刷卡/输入卡号/手机号"
+        android:paddingLeft="@dimen/cashregister_margin_10dp"
+        android:paddingTop="@dimen/cashregister_margin_20dp"
+        android:paddingRight="@dimen/cashregister_margin_10dp"
+        android:paddingBottom="@dimen/cashregister_margin_20dp"
+        android:textColor="@color/cashregister_time_text_color"
+        android:textSize="@dimen/cashregister_text_24sp" />
+
+    <TextView
+        android:id="@id/cashregister_search_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/cashregister_margin_40dp"
+        android:layout_marginRight="@dimen/cashregister_margin_40dp"
+        android:layout_weight="1"
+        android:background="@drawable/cashregister_cash_login_btn_bg"
+        android:gravity="center"
+        android:padding="@dimen/cashregister_margin_20dp"
+        android:text="确定"
+        android:textColor="@color/cashregister_white"
+        android:textSize="@dimen/cashregister_text_24sp"
+        android:visibility="gone" />
+
+
+</LinearLayout>

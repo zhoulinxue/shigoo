@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="ordedishes_cash_login_tv" type="id" />
+    <item name="ordedishes_cash_login_psw_edit" type="id" />
+    <item name="ordedishes_cash_login_num_edit" type="id" />
+    <item name="ordedishes_logo_img" type="id" />
+    <item name="ordedishes_cash_login_logo_layout" type="id" />
+    <item name="ordedishes_test_text" type="id" />
+    <item name="ordedishes_main_recyclerView" type="id" />
+    <item name="ordedishes_main_itme_logo" type="id" />
+    <item name="ordedishes_main_itme_name" type="id" />
+    <item name="ordedishes_fragment_container" type="id" />
+    <item name="ordedishes_table_left_container" type="id" />
+    <item name="ordedishes_table_right_container" type="id" />
+    <item name="ordedishes_table_left_title_layout" type="id" />
+</resources>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ordedishes_app_name">order dishes</string>
+    <string name="ordedishes_empty_psw">Input password</string>
+    <string name="ordedishes_empty_name">Input number</string>
+    <string name="ordedishes_login">Login</string>
+    <string name="ordedishes_table_left_notice">选中桌台，开始点菜</string>
+
+</resources>

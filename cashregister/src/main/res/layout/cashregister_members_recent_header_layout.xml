@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@id/cashregister_make_card"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:src="@mipmap/cashregister_make_card" />
+
+    <ImageView
+        android:id="@id/cashregister_add_menbers"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:src="@mipmap/cashregister_add_menbers" />
+
+    <ImageView
+        android:id="@id/cashregister_recharge"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:src="@mipmap/cashregister_recharge" />
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/cashregister_member_main_search_hight_marginLeft"
+        android:layout_marginTop="@dimen/cashregister_margin_39dp"
+        android:layout_marginRight="@dimen/cashregister_member_main_search_hight_marginLeft"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:id="@id/cashregister_member_search_edit_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.xgsb.cashregister.wedgit.ClearableEditTextWithIcon
+                android:id="@id/cashregister_member_search_edit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="5"
+                android:background="@drawable/cashregister_member_search_edit_bg"
+                android:ellipsize="end"
+                android:hint="刷卡或输入卡号/11位手机号码搜索"
+                android:imeOptions="actionSearch"
+                android:maxLines="1"
+                android:numeric="integer"
+                android:paddingLeft="@dimen/cashregister_margin_10dp"
+                android:paddingTop="@dimen/cashregister_member_edite_padding_top"
+                android:paddingBottom="@dimen/cashregister_member_edite_padding_top"
+                android:textSize="@dimen/cashregister_menber_edit_text_size" />
+
+            <ImageView
+                android:id="@id/cashregister_search_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:src="@mipmap/cashregister_icon_seach"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@id/cashregister_menber_num_decript"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cashregister_member_search_edit_layout"
+            android:layout_marginTop="@dimen/cashregister_menber_num_decript_top"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/cashregister_menber_num_decript_color"
+            android:textSize="@dimen/cashregister_menber_num_text_size"
+            tools:text="共  2000  个会员" />
+
+        <TextView
+            android:id="@id/cashregister_new_menber_num_decript"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cashregister_menber_num_decript"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/cashregister_menber_num_decript_color"
+            android:textSize="@dimen/cashregister_menber_num_text_size"
+            tools:text="今日新增  50  个" />
+
+    </RelativeLayout>
+
+</LinearLayout>

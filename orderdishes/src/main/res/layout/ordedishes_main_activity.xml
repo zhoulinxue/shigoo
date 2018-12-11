@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ordedishes_login_bg">
+
+    <include
+        android:id="@id/ordedishes_cash_login_logo_layout"
+        layout="@layout/ordedishes_logo_main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="@dimen/ordedishes_login_margin_top" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@id/ordedishes_main_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ordedishes_cash_login_logo_layout"
+        android:layout_marginLeft="@dimen/ordedishes_main_margin_left"
+        android:layout_marginTop="@dimen/ordedishes_40dp"
+        android:layout_marginRight="@dimen/ordedishes_main_margin_left"
+        android:layout_marginBottom="@dimen/ordedishes_40dp"
+        android:background="@null" />
+</RelativeLayout>

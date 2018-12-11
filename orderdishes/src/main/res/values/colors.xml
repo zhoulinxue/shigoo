@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="ordedishes_cash_login_edit_end_color">#2E3237</color>
+    <color name="ordedishes_cash_login_edit_start_color">#3D4249</color>
+    <color name="ordedishes_black_08">#33000000</color>
+    <color name="ordedishes_white_08">#0cffffff</color>
+    <color name="ordedishes_colorAccent">#1D95FF</color>
+</resources>

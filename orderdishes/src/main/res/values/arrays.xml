@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="ordedishes_menber_tab_title">
+        <item>点单</item>
+        <item>赠送</item>
+        <item>估清</item>
+        <item>存酒查询</item>
+        <item>会员查询</item>
+        <item>业绩查询</item>
+    </string-array>
+</resources>

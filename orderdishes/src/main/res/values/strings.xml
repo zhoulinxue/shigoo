@@ -1,0 +1,7 @@
+<resources>
+    <string name="ordedishes_app_name">点单机</string>
+    <string name="ordedishes_empty_psw">请输入密码</string>
+    <string name="ordedishes_empty_name">请输入工号</string>
+    <string name="ordedishes_login">登录</string>
+    <string name="ordedishes_table_left_notice">选中桌台，开始点菜</string>
+</resources>

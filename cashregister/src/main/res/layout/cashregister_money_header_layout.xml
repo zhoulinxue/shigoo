@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/cashregister_recharge_top_margin"
+            android:layout_weight="2"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/cashregister_recharge_left_margin"
+                android:maxLines="1"
+                android:text="@string/cashregister_recharge_fragment_search_tv"
+                android:textSize="@dimen/cashregister_member_tabl_text_size" />
+
+            <com.xgsb.cashregister.wedgit.ClearableEditTextWithIcon
+                android:id="@id/cashregister_member_search_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/cashregister_member_search_edit_bg"
+                android:ellipsize="end"
+                android:hint="刷卡或输入卡号/手机号码"
+                android:imeOptions="actionSearch"
+                android:maxLines="1"
+                android:numeric="integer"
+                android:paddingLeft="@dimen/cashregister_margin_10dp"
+                android:paddingTop="@dimen/cashregister_member_edite_padding_top"
+                android:paddingRight="@dimen/cashregister_margin_20dp"
+                android:paddingBottom="@dimen/cashregister_member_edite_padding_top"
+                android:textSize="@dimen/cashregister_menber_edit_text_size" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/cashregister_recharge_top_margin"
+            android:layout_weight="2"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/cashregister_recharge_left_margin"
+                android:maxLines="1"
+                android:text="@string/cashregister_recharge_time"
+                android:textSize="@dimen/cashregister_member_tabl_text_size" />
+
+            <TextView
+                android:id="@id/cashregister_recharge_time_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/cashregister_member_search_edit_bg"
+                android:drawableRight="@mipmap/cashregister_icon_time"
+                android:drawablePadding="@dimen/cashregister_margin_20dp"
+                android:ellipsize="end"
+                android:hint="2015-10-12   ~   2015-10-10"
+                android:maxLines="1"
+                android:paddingLeft="@dimen/cashregister_margin_10dp"
+                android:paddingTop="@dimen/cashregister_member_edite_padding_top"
+                android:paddingRight="@dimen/cashregister_margin_10dp"
+                android:paddingBottom="@dimen/cashregister_member_edite_padding_top"
+                android:textSize="@dimen/cashregister_menber_edit_text_size" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/cashregister_recharge_top_margin"
+            android:layout_weight="1"
+            android:background="@drawable/cashregister_member_search_edit_bg"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/cashregister_margin_10dp"
+            android:paddingTop="@dimen/cashregister_member_edite_padding_top"
+            android:paddingRight="@dimen/cashregister_margin_10dp"
+            android:paddingBottom="@dimen/cashregister_member_edite_padding_top">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#D7DDE4"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@id/cashregister_today_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:background="@color/cashregister_white"
+                    android:maxLines="1"
+                    android:paddingLeft="@dimen/cashregister_margin_10dp"
+                    android:paddingRight="@dimen/cashregister_margin_10dp"
+                    android:text="@string/cashregister_today" />
+
+                <TextView
+                    android:id="@id/cashregister_yesterday_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/cashregister_white"
+                    android:maxLines="1"
+                    android:paddingLeft="@dimen/cashregister_margin_10dp"
+                    android:paddingRight="@dimen/cashregister_margin_10dp"
+                    android:text="@string/cashregister_yesterday" />
+
+                <TextView
+                    android:id="@id/cashregister_last_seven_days"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/cashregister_white"
+                    android:maxLines="1"
+                    android:paddingLeft="@dimen/cashregister_margin_10dp"
+                    android:paddingRight="@dimen/cashregister_margin_10dp"
+                    android:text="@string/cashregister_last_seven_days" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/cashregister_margin_20dp"
+            android:layout_marginTop="@dimen/cashregister_recharge_top_margin"
+            android:layout_marginRight="@dimen/cashregister_margin_20dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@id/cashregister_search_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="@drawable/cashregister_member_search_btn_bg"
+                android:gravity="center"
+                android:maxLines="1"
+                android:paddingLeft="@dimen/cashregister_margin_10dp"
+                android:paddingTop="@dimen/cashregister_member_edite_padding_top"
+                android:paddingRight="@dimen/cashregister_margin_10dp"
+                android:paddingBottom="@dimen/cashregister_member_edite_padding_top"
+                android:text="@string/cashregister_search"
+                android:textColor="@color/cashregister_white"
+                android:textSize="@dimen/cashregister_text_size_12sp" />
+
+            <TextView
+                android:id="@id/cashregister_clean_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/cashregister_margin_10dp"
+                android:layout_weight="1"
+                android:background="@drawable/cashregister_member_search_edit_bg"
+                android:gravity="center"
+                android:maxLines="1"
+                android:paddingLeft="@dimen/cashregister_margin_10dp"
+                android:paddingTop="@dimen/cashregister_member_edite_padding_top"
+                android:paddingRight="@dimen/cashregister_margin_10dp"
+                android:paddingBottom="@dimen/cashregister_member_edite_padding_top"
+                android:text="@string/cashregister_clean"
+                android:textSize="@dimen/cashregister_text_size_12sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="@dimen/cashregister_margin_20dp"
+        android:layout_marginTop="@dimen/cashregister_margin_20dp"
+        android:layout_marginRight="@dimen/cashregister_margin_20dp"
+        android:background="#D7DDE4" />
+</LinearLayout>
