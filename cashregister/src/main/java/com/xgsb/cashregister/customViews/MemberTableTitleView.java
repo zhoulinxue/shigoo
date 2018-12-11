@@ -57,12 +57,12 @@ public class MemberTableTitleView extends BaseCustomView {
         View memberView = LayoutInflater.from(context).inflate(R.layout.cashregister_member_table_menber_layout, null);
         View memberRechaege = LayoutInflater.from(context).inflate(R.layout.cashregister_member_table_recharge_layout, null);
         View memberConsume = LayoutInflater.from(context).inflate(R.layout.cashregister_member_table_consume_layout, null);
-        mMemberTv = memberView.findViewById(R2.id.cashregister_member_member_text);
-        mMenberLine = memberView.findViewById(R2.id.cashregister_member_member_line);
-        mRechargeTv = memberRechaege.findViewById(R2.id.cashregister_member_recharge_text);
-        mRechargeLine = memberRechaege.findViewById(R2.id.cashregister_member_recharge_line);
-        mConsumeTv = memberConsume.findViewById(R2.id.cashregister_member_consume_text);
-        mConsumeLine = memberConsume.findViewById(R2.id.cashregister_member_consume_line);
+        mMemberTv = memberView.findViewById(R.id.cashregister_member_member_text);
+        mMenberLine = memberView.findViewById(R.id.cashregister_member_member_line);
+        mRechargeTv = memberRechaege.findViewById(R.id.cashregister_member_recharge_text);
+        mRechargeLine = memberRechaege.findViewById(R.id.cashregister_member_recharge_line);
+        mConsumeTv = memberConsume.findViewById(R.id.cashregister_member_consume_text);
+        mConsumeLine = memberConsume.findViewById(R.id.cashregister_member_consume_line);
         memberTab.setCustomView(memberView);
         memberRechaegeTAb.setCustomView(memberRechaege);
         memberConsumeTab.setCustomView(memberConsume);

@@ -22,7 +22,7 @@
             android:textSize="@dimen/cashregister_member_tabl_text_size" />
 
         <TextView
-            android:id="@+id/member_member_line"
+            android:id="@id/cashregister_member_member_line"
             android:layout_width="28dp"
             android:layout_height="2dp"
             android:layout_below="@id/cashregister_member_member_text"

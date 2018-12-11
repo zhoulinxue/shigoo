@@ -179,7 +179,7 @@ public class MemberListFragement extends MvpFragment<MemberManagePresenter> impl
                 hideInputMethod();
             }
         });
-        final TextView cacenlTv = dialogview.findViewById(R.id.dialog_left_tv);
+        final TextView cacenlTv = dialogview.findViewById(R.id.cashregister_dialog_left_tv);
         mobileTv = dialogview.findViewById(R.id.cashregister_member_mobile_tv);
         entityCardTv = dialogview.findViewById(R.id.cashregister_entity_card_num_edite);
         final TextView entityCardTrue = dialogview.findViewById(R.id.cashregister_entity_card_tv_true);
@@ -234,7 +234,7 @@ public class MemberListFragement extends MvpFragment<MemberManagePresenter> impl
                 mAddialog.dismiss();
             }
         });
-        TextView sureTv = dialogview.findViewById(R.id.dialog_right_tv);
+        TextView sureTv = dialogview.findViewById(R.id.cashregister_dialog_right_tv);
         sureTv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

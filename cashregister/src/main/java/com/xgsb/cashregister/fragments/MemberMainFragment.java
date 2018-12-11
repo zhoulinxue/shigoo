@@ -82,7 +82,7 @@ public class MemberMainFragment extends BaseFragment implements TabLayout.OnTabS
             public int getCount() {
                 return fragments.size();
             }
-        }, R.id.fragment_container);
+        }, R.id.cashregister_fragment_container);
         mNavigator.setDefaultPosition(0);
         showSeletedTable(mNavigator.getCurrentPosition());
     }
