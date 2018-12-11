@@ -8,6 +8,7 @@ import android.widget.FrameLayout;
 
 import com.aspsine.fragmentnavigator.FragmentNavigator;
 import com.aspsine.fragmentnavigator.FragmentNavigatorAdapter;
+import com.xgsb.cashregister.R2;
 import com.xgsb.cashregister.customViews.MemberTableTitleView;
 import com.xgsb.cashregister.R;
 import com.zx.mvplibrary.BaseFragment;
@@ -27,7 +28,7 @@ import butterknife.ButterKnife;
  */
 public class MemberMainFragment extends BaseFragment implements TabLayout.OnTabSelectedListener {
     private MemberTableTitleView mTitleView;
-    @BindView(R.id.member_table_layout_container)
+    @BindView(R2.id.cashregister_member_table_layout_container)
     FrameLayout mTableLayoutContainer;
     private List<Fragment> fragments = new ArrayList<>();
     private FragmentNavigator mNavigator;

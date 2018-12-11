@@ -16,6 +16,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.xgsb.cashregister.R2;
 import com.xgsb.cashregister.customViews.RechargeView;
 import com.xgsb.cashregister.R;
 import com.xgsb.cashregister.activitys.AddAndUpdateMemberActivity;
@@ -52,50 +53,50 @@ import butterknife.OnClick;
 public class MemberDetailFragment extends MvpFragment<MemberDetailPresenter> implements MemberDetailContact.view, AddCardContact.view, RechargeView.RechargeLisenter, DialogInterface.OnDismissListener {
     private String id;
 
-    @BindView(R.id.member_detail_back_layout)
+    @BindView(R2.id.cashregister_member_detail_back_layout)
     View mBackView;
-    @BindView(R.id.member_detail_mobile_num)
+    @BindView(R2.id.cashregister_member_detail_mobile_num)
     TextView mPhoneNum;
-    @BindView(R.id.card_type)
+    @BindView(R2.id.cashregister_card_type)
     TextView mCardType;
-    @BindView(R.id.card_num)
+    @BindView(R2.id.cashregister_card_num)
     TextView mCardNum;
-    @BindView(R.id.member_level)
+    @BindView(R2.id.cashregister_member_level)
     TextView mMemberLevelName;
-    @BindView(R.id.growth_value)
+    @BindView(R2.id.cashregister_growth_value)
     TextView mGrowthValue;
-    @BindView(R.id.preferential)
+    @BindView(R2.id.cashregister_preferential)
     TextView mYHType;
-    @BindView(R.id.integral_balance_value)
+    @BindView(R2.id.cashregister_integral_balance_value)
     TextView mIntegralBalance;
-    @BindView(R.id.stored_value_balance)
+    @BindView(R2.id.cashregister_stored_value_balance)
     TextView mStoredValue;
-    @BindView(R.id.membership_assignment)
+    @BindView(R2.id.cashregister_membership_assignment)
     TextView mMembership;
-    @BindView(R.id.membership_status)
+    @BindView(R2.id.cashregister_membership_status)
     TextView mMenberStatus;
-    @BindView(R.id.recharge_btn)
+    @BindView(R2.id.cashregister_recharge_btn)
     Button mRechargeBtn;
-    @BindView(R.id.member_name_tv)
+    @BindView(R2.id.cashregister_member_name_tv)
     TextView mNameText;
-    @BindView(R.id.member_birthday)
+    @BindView(R2.id.cashregister_member_birthday)
     TextView mBirthdayTv;
-    @BindView(R.id.card_opening_time)
+    @BindView(R2.id.cashregister_card_opening_time)
     TextView mCardOpTime;
-    @BindView(R.id.consume_num)
+    @BindView(R2.id.cashregister_consume_num)
     TextView mConsumeNum;
-    @BindView(R.id.consumption_amount)
+    @BindView(R2.id.cashregister_consumption_amount)
     TextView mAountedNum;
-    @BindView(R.id.last_consume_time)
+    @BindView(R2.id.cashregister_last_consume_time)
     TextView mLastConsumeTime;
-    @BindView(R.id.card_num_layout)
+    @BindView(R2.id.cashregister_card_num_layout)
     View mCardNumLayout;
-    @BindView(R.id.coupon_available)
+    @BindView(R2.id.cashregister_coupon_available)
     TextView mCouponAvaliable;
-    @BindView(R.id.coupon_recyclerview)
+    @BindView(R2.id.cashregister_coupon_recyclerview)
     RecyclerView mRecyclerView;
     CouponAdapter mAdapter;
-    @BindView(R.id.freeze_tv)
+    @BindView(R2.id.cashregister_freeze_tv)
     TextView mFroenTv;
     private List<Couponbean> mList;
     private Member mMber;
@@ -145,7 +146,7 @@ public class MemberDetailFragment extends MvpFragment<MemberDetailPresenter> imp
         } else {
             mCardNum.setText(member.getCard_number());
         }
-        String couponTv = String.format(getResources().getString(R.string.coupons_available), member.getVoucher().size() + "");
+        String couponTv = String.format(getResources().getString(R.string.cashregister_coupons_available), member.getVoucher().size() + "");
         mCouponAvaliable.setText(couponTv);
         mMemberLevelName.setText(member.getGrade_name());
         mYHType.setText(member.getGrade_discount_than_name());
@@ -187,9 +188,9 @@ public class MemberDetailFragment extends MvpFragment<MemberDetailPresenter> imp
         mAdapter = new CouponAdapter(R.layout.cashregister_coupon_layout, mList);
         mRecyclerView.setAdapter(mAdapter);
         mChanageLayout = LayoutInflater.from(getContext()).inflate(R.layout.cashregister_chanage_card_layout, null);
-        mCardNumEditText = mChanageLayout.findViewById(R.id.input_edite);
+        mCardNumEditText = mChanageLayout.findViewById(R.id.cashregister_input_edite);
         mCardNumEditText.setInputType(InputType.TYPE_NULL);
-        mNumTextview = mChanageLayout.findViewById(R.id.card_codeing_num);
+        mNumTextview = mChanageLayout.findViewById(R.id.cashregister_card_codeing_num);
         mCardNumEditText.setOnEditorActionListener(
                 new TextView.OnEditorActionListener() {
                     @Override
@@ -230,13 +231,13 @@ public class MemberDetailFragment extends MvpFragment<MemberDetailPresenter> imp
         }
     }
 
-    @OnClick({R.id.member_detail_back_layout, R.id.freeze_tv, R.id.refund_tv, R.id.cancellation_tv, R.id.recharge_btn, R.id.change_card, R.id.update_member_msg})
+    @OnClick({R2.id.cashregister_member_detail_back_layout, R2.id.cashregister_freeze_tv, R2.id.cashregister_refund_tv, R2.id.cashregister_cancellation_tv, R2.id.cashregister_recharge_btn, R2.id.cashregister_change_card, R2.id.cashregister_update_member_msg})
     public void onViewClicked(View v) {
         switch (v.getId()) {
-            case R.id.member_detail_back_layout:
+            case R2.id.cashregister_member_detail_back_layout:
                 org.greenrobot.eventbus.EventBus.getDefault().post(new FragmentEvent(ChildViewClick.MEMBER_DETAIL_BACK));
                 break;
-            case R.id.freeze_tv:
+            case R2.id.cashregister_freeze_tv:
                 String notice="";
                 switch (mFroenType){
                     case 1:
@@ -254,7 +255,7 @@ public class MemberDetailFragment extends MvpFragment<MemberDetailPresenter> imp
                 });
                 mTwoBtnDialog.setOnDismissListener(this);
                 break;
-            case R.id.refund_tv:
+            case R2.id.cashregister_refund_tv:
                 mTwoBtnDialog = DialogUtil.showDialogTwoButton(getActivity(), "确认要退款吗?",
                         " 退款金额: " + Param.Keys.RMB + mMber.getMoney_principal() + "\n 积分扣除：" + mIntegralBalance.getText() + "\n 成长值：" + mGrowthValue.getText() + "\n" + "会员等级：" + mMemberLevelName.getText(), "取消", null, "确认退款", new DialogInterface.OnClickListener() {
                             @Override
@@ -264,7 +265,7 @@ public class MemberDetailFragment extends MvpFragment<MemberDetailPresenter> imp
                         });
                 mTwoBtnDialog.setOnDismissListener(this);
                 break;
-            case R.id.cancellation_tv:
+            case R2.id.cashregister_cancellation_tv:
                 mTwoBtnDialog = DialogUtil.showDialogTwoButton(getActivity(), "确认要注销吗?", "退款金额:" + Param.Keys.RMB + mMber.getMoney_principal(), "取消", null, "确认注销", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
@@ -273,10 +274,10 @@ public class MemberDetailFragment extends MvpFragment<MemberDetailPresenter> imp
                 });
                 mTwoBtnDialog.setOnDismissListener(this);
                 break;
-            case R.id.recharge_btn:
+            case R2.id.cashregister_recharge_btn:
                 mRechargeView.show();
                 break;
-            case R.id.change_card:
+            case R2.id.cashregister_change_card:
                 if (mChanageDialog == null) {
                     mChanageDialog = DialogUtil.contentDialog(getActivity(), mChanageLayout);
                 } else {
@@ -284,7 +285,7 @@ public class MemberDetailFragment extends MvpFragment<MemberDetailPresenter> imp
                 }
                 mChanageDialog.setOnDismissListener(this);
                 break;
-            case R.id.update_member_msg:
+            case R2.id.cashregister_update_member_msg:
                 Intent intent = new Intent(getActivity(), AddAndUpdateMemberActivity.class);
                 intent.putExtra(Param.Keys.MEMBER_DATA, mMber);
                 startActivity(intent);

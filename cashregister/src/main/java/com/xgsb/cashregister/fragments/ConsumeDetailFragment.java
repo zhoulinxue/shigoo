@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.FrameLayout;
 
+import com.xgsb.cashregister.R2;
 import com.xgsb.cashregister.customViews.ConsumeHeaderView;
 import com.xgsb.cashregister.customViews.WebChartView;
 import com.xgsb.cashregister.R;
@@ -33,11 +34,11 @@ import io.starteos.dappsdk.Response;
  * Date: 2018-11-28 10:04
  */
 public class ConsumeDetailFragment extends MvpFragment<ConsumePresenter> implements ConsumeContact.view, onOperateLisenter {
-    @BindView(R.id.web_page_header_layout)
+    @BindView(R2.id.cashregister_web_page_header_layout)
     FrameLayout mHeaderViewLayout;
-    @BindView(R.id.web_page_footer_layout)
+    @BindView(R2.id.cashregister_web_page_footer_layout)
     FrameLayout mFooterView;
-    @BindView(R.id.web_chart_layout)
+    @BindView(R2.id.cashregister_web_chart_layout)
     FrameLayout mWebChartContainer;
     private ConsumeHeaderView mHeader;
     private WebChartView mWebCahrtView;

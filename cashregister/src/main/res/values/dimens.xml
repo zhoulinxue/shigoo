@@ -40,6 +40,7 @@
     <dimen name="cashregister_margin_100dp">100dp</dimen>
     <dimen name="cashregister_text_24sp">24sp</dimen>
     <dimen name="cashregister_text_16sp">16sp</dimen>
+    <dimen name="cashregister_text_12sp">16sp</dimen>
     <dimen name="cashregister_margin_80dp">80dp</dimen>
     <dimen name="cashregister_margin_90dp">90dp</dimen>
 </resources>

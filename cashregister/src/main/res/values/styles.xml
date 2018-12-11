@@ -1,29 +1,30 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="cashregister_AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
-        <item name="cashregister_colorPrimary">@color/cashregister_colorPrimary</item>
-        <item name="cashregister_colorPrimaryDark">@color/cashregister_colorPrimaryDark</item>
-        <item name="cashregister_colorAccent">@color/cashregister_colorAccent</item>
+        <item name="colorPrimary">@color/cashregister_colorPrimary</item>
+        <item name="colorPrimaryDark">@color/cashregister_colorPrimaryDark</item>
+        <item name="colorAccent">@color/cashregister_colorAccent</item>
     </style>
 
     <style name="cashregister_dialog_round_corner" parent="android:style/Theme.Dialog">
-        <item name="cashregister_android:windowFrame">@null</item>
-        <item name="cashregister_android:windowNoTitle">true</item>
-        <item name="cashregister_android:windowIsTranslucent">true</item>
-        <item name="cashregister_android:windowBackground">@android:color/transparent</item>
-        <item name="cashregister_android:windowIsFloating">true</item>
-        <item name="cashregister_android:windowContentOverlay">@null</item>
-        <item name="cashregister_android:layout_marginLeft">30dp</item>
-        <item name="cashregister_android:layout_marginRight">30dp</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:layout_marginLeft">30dp</item>
+        <item name="android:layout_marginRight">30dp</item>
     </style>
+
 
     <style name="cashregister_translucent" parent="Theme.AppCompat.NoActionBar">
         　　　　
-        <item name="cashregister_android:windowBackground">@color/cashregister_black_08</item>
+        <item name="android:windowBackground">@color/cashregister_black_08</item>
         　　　　
-        <item name="cashregister_android:windowIsTranslucent">true</item>
+        <item name="android:windowIsTranslucent">true</item>
 
     </style>
 </resources>

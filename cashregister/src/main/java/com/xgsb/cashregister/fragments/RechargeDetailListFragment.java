@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 
+import com.xgsb.cashregister.R2;
 import com.xgsb.cashregister.customViews.ReChargeHeaderView;
 import com.xgsb.cashregister.customViews.WebChartView;
 import com.xgsb.cashregister.R;
@@ -38,11 +39,11 @@ import io.starteos.dappsdk.Response;
  * Date: 2018-11-28 10:04
  */
 public class RechargeDetailListFragment extends MvpFragment<RecahrgePresenter> implements MemberRechargeContact.view, onOperateLisenter {
-    @BindView(R.id.web_page_header_layout)
+    @BindView(R2.id.cashregister_web_page_header_layout)
     FrameLayout mHeaderViewLayout;
-    @BindView(R.id.web_page_footer_layout)
+    @BindView(R2.id.cashregister_web_page_footer_layout)
     FrameLayout mFooterView;
-    @BindView(R.id.web_chart_layout)
+    @BindView(R2.id.cashregister_web_chart_layout)
     FrameLayout mWebChartContainer;
     private ReChargeHeaderView mHeader;
     private WebChartView mWebCahrtView;
@@ -135,11 +136,11 @@ public class RechargeDetailListFragment extends MvpFragment<RecahrgePresenter> i
 
     private void initDialog() {
         mCancelLayout = LayoutInflater.from(getContext()).inflate(R.layout.cashregister_cancelation_diaolog_layout, null);
-        mPhoneNum = mCancelLayout.findViewById(R.id.moblie_phone);
-        mRechargeMoney = mCancelLayout.findViewById(R.id.consume_recharge_money);
-        mPreReCharge = mCancelLayout.findViewById(R.id.rechare_pre);
-        mValueRec = mCancelLayout.findViewById(R.id.rechare_vlaue);
-        mCardNum = mCancelLayout.findViewById(R.id.card_num);
+        mPhoneNum = mCancelLayout.findViewById(R.id.cashregister_moblie_phone);
+        mRechargeMoney = mCancelLayout.findViewById(R.id.cashregister_consume_recharge_money);
+        mPreReCharge = mCancelLayout.findViewById(R.id.cashregister_rechare_pre);
+        mValueRec = mCancelLayout.findViewById(R.id.cashregister_rechare_vlaue);
+        mCardNum = mCancelLayout.findViewById(R.id.cashregister_card_num);
         mCancelLayout.findViewById(R.id.dialog_left_tv).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

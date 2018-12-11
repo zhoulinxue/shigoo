@@ -46,7 +46,7 @@
             android:padding="@dimen/cashregister_margin_20dp">
 
             <RadioGroup
-                android:id="@+id/radioGroup_sex_id"
+                android:id="@id/cashregister_radioGroup_sex_id"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.3"
@@ -79,7 +79,7 @@
                 android:ellipsize="end"
                 android:hint="请刷卡录入卡号"
                 android:imeOptions="actionSearch"
-                android:numeric="integer"
+                android:inputType="number"
                 android:paddingLeft="@dimen/cashregister_margin_10dp"
                 android:paddingTop="@dimen/cashregister_member_edite_padding_top"
                 android:paddingBottom="@dimen/cashregister_member_edite_padding_top"
@@ -103,16 +103,17 @@
                     android:id="@id/cashregister_card_num_edite"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/cashregister_dp_10"
+                    android:layout_marginLeft="@dimen/cashregister_margin_10dp"
                     android:background="@drawable/cashregister_member_search_edit_bg"
                     android:ellipsize="end"
                     android:hint="请输入卡的数量"
                     android:imeOptions="actionSearch"
-                    android:numeric="integer"
+                    android:inputType="number"
                     android:paddingLeft="@dimen/cashregister_margin_10dp"
                     android:paddingTop="@dimen/cashregister_member_edite_padding_top"
                     android:paddingBottom="@dimen/cashregister_member_edite_padding_top"
                     android:textSize="@dimen/cashregister_menber_edit_text_size" />
+
             </LinearLayout>
         </LinearLayout>
 

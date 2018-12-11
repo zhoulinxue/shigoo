@@ -23,7 +23,7 @@
             android:layout_height="wrap_content"
             android:maxLines="1"
             android:text="普通会员"
-            android:textSize="@dimen/cashregister_sp_16"
+            android:textSize="@dimen/cashregister_text_16sp"
             android:textStyle="bold" />
 
         <TextView
@@ -33,6 +33,6 @@
             android:layout_marginTop="10dp"
             android:maxLines="1"
             android:text="无优惠"
-            android:textSize="@dimen/cashregister_sp_12" />
+            android:textSize="@dimen/cashregister_text_12sp" />
     </LinearLayout>
 </LinearLayout>

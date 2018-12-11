@@ -17,6 +17,7 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.xgsb.cashregister.R2;
 import com.xgsb.cashregister.customViews.MemberListHeaderView;
 import com.xgsb.cashregister.customViews.RechargeView;
 import com.xgsb.cashregister.customViews.WebChartView;
@@ -65,11 +66,11 @@ import io.starteos.dappsdk.Response;
  * Date: 2018-11-26 13:22
  */
 public class MemberListFragement extends MvpFragment<MemberManagePresenter> implements MemberManageContact.view, TextView.OnEditorActionListener, RechargeView.RechargeLisenter, onOperateLisenter, AddCardContact.view {
-    @BindView(R.id.web_page_header_layout)
+    @BindView(R2.id.cashregister_web_page_header_layout)
     FrameLayout mHeaderView;
-    @BindView(R.id.web_page_footer_layout)
+    @BindView(R2.id.cashregister_web_page_footer_layout)
     FrameLayout mFooterView;
-    @BindView(R.id.web_chart_layout)
+    @BindView(R2.id.cashregister_web_chart_layout)
     FrameLayout mWebChartContainer;
     private MemberListHeaderView mMemberHeaderView;
     private List<String> mTitles;
@@ -131,7 +132,7 @@ public class MemberListFragement extends MvpFragment<MemberManagePresenter> impl
 
     private void initSearchMemberDialog() {
         final View inputView = LayoutInflater.from(getContext()).inflate(R.layout.cashregister_input_member_dialog, null);
-        final EditText memberNumedite = inputView.findViewById(R.id.member_input_edite);
+        final EditText memberNumedite = inputView.findViewById(R.id.cashregister_member_input_edite);
         memberNumedite.setImeOptions(EditorInfo.IME_ACTION_SEARCH);
         memberNumedite.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
@@ -143,7 +144,7 @@ public class MemberListFragement extends MvpFragment<MemberManagePresenter> impl
                 return false;
             }
         });
-        TextView searchBtn = inputView.findViewById(R.id.search_btn);
+        TextView searchBtn = inputView.findViewById(R.id.cashregister_search_btn);
         searchBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -179,19 +180,19 @@ public class MemberListFragement extends MvpFragment<MemberManagePresenter> impl
             }
         });
         final TextView cacenlTv = dialogview.findViewById(R.id.dialog_left_tv);
-        mobileTv = dialogview.findViewById(R.id.member_mobile_tv);
-        entityCardTv = dialogview.findViewById(R.id.entity_card_num_edite);
-        final TextView entityCardTrue = dialogview.findViewById(R.id.entity_card_tv_true);
-        final TextView entityCardFlase = dialogview.findViewById(R.id.entity_card_tv_false);
-        final LinearLayout cardNumberlayout = dialogview.findViewById(R.id.card_num_layout);
-        mInputEdite = dialogview.findViewById(R.id.input_edite);
+        mobileTv = dialogview.findViewById(R.id.cashregister_member_mobile_tv);
+        entityCardTv = dialogview.findViewById(R.id.cashregister_entity_card_num_edite);
+        final TextView entityCardTrue = dialogview.findViewById(R.id.cashregister_entity_card_tv_true);
+        final TextView entityCardFlase = dialogview.findViewById(R.id.cashregister_entity_card_tv_false);
+        final LinearLayout cardNumberlayout = dialogview.findViewById(R.id.cashregister_card_num_layout);
+        mInputEdite = dialogview.findViewById(R.id.cashregister_input_edite);
         mInputEdite.setInputType(InputType.TYPE_NULL);
-        mInputLayout = dialogview.findViewById(R.id.input_layout);
-        mCardInputLayout = dialogview.findViewById(R.id.input_card_layout);
+        mInputLayout = dialogview.findViewById(R.id.cashregister_input_layout);
+        mCardInputLayout = dialogview.findViewById(R.id.cashregister_input_card_layout);
         entityCardTrue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                entityCardFlase.setTextColor(getResources().getColor(R.color.menber_num_decript_color));
+                entityCardFlase.setTextColor(getResources().getColor(R.color.cashregister_menber_num_decript_color));
                 entityCardFlase.setBackgroundResource(R.drawable.cashregister_card_level_bg);
                 entityCardTrue.setTextColor(getResources().getColor(R.color.colorAccent));
                 entityCardTrue.setBackgroundResource(R.drawable.cashregister_card_level_bg_selected);
@@ -202,7 +203,7 @@ public class MemberListFragement extends MvpFragment<MemberManagePresenter> impl
         entityCardFlase.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                entityCardTrue.setTextColor(getResources().getColor(R.color.menber_num_decript_color));
+                entityCardTrue.setTextColor(getResources().getColor(R.color.cashregister_menber_num_decript_color));
                 entityCardTrue.setBackgroundResource(R.drawable.cashregister_card_level_bg);
                 entityCardFlase.setTextColor(getResources().getColor(R.color.colorAccent));
                 entityCardFlase.setBackgroundResource(R.drawable.cashregister_card_level_bg_selected);
@@ -240,7 +241,7 @@ public class MemberListFragement extends MvpFragment<MemberManagePresenter> impl
                 mPresenter.addmember(Param.Keys.TOKEN, getToken(), Param.Keys.CARD_TYPE, mCardType + "", Param.Keys.MOBILE, mobileTv.getText().toString(), Param.Keys.GRADE_ID, mMemberLevelsAdapter.getCurrentLevel(), Param.Keys.ENTITY_CARD_NUM, entityCardTv.getText().toString().trim());
             }
         });
-        RecyclerView mlevelsRecyclerView = dialogview.findViewById(R.id.levels_recyclerView);
+        RecyclerView mlevelsRecyclerView = dialogview.findViewById(R.id.cashregister_levels_recyclerView);
         LinearLayoutManager manager = new LinearLayoutManager(getContext());
         manager.setOrientation(LinearLayoutManager.HORIZONTAL);
         mlevelsRecyclerView.setLayoutManager(manager);

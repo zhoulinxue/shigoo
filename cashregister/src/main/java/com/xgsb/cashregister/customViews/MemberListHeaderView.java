@@ -53,7 +53,7 @@ public class MemberListHeaderView extends BaseCustomView {
 
     @Override
     protected void initView(Context context, View rootView) {
-        mEditText.setIconResource(R.mipmap.icon_seach);
+        mEditText.setIconResource(R.mipmap.cashregister_icon_seach);
     }
 
     @Override
@@ -97,7 +97,7 @@ public class MemberListHeaderView extends BaseCustomView {
 
     private SpannableString getSpan(CharSequence src, int start, int end) {
         SpannableString spannableString = new SpannableString(src);
-        ForegroundColorSpan colorSpan = new ForegroundColorSpan(getView().getResources().getColor(R.color.member_detail_title_color));
+        ForegroundColorSpan colorSpan = new ForegroundColorSpan(getView().getResources().getColor(R.color.cashregister_member_detail_title_color));
         spannableString.setSpan(colorSpan, start, end, Spanned.SPAN_INCLUSIVE_EXCLUSIVE);
         return spannableString;
     }

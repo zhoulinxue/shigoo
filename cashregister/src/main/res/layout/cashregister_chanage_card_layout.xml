@@ -17,7 +17,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/cashregister_margin_80dp"
-        android:layout_marginTop="@dimen/cashregister_dp_40"
+        android:layout_marginTop="@dimen/cashregister_margin_40dp"
         android:layout_marginRight="@dimen/cashregister_margin_80dp"
         android:background="@drawable/cashregister_member_search_edit_bg"
         android:gravity="center_horizontal"

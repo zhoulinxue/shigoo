@@ -17,12 +17,13 @@
         android:name=".runalone.App"
         android:allowBackup="true"
         android:label="@string/cashregister_app_name"
+        android:icon="@mipmap/cashregister_home_pic_logo"
+        android:roundIcon="@mipmap/cashregister_home_pic_logo"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
-        tools:replace="android:theme,android:label">
+        android:theme="@style/cashregister_AppTheme"
+        tools:replace="android:theme,android:label,android:icon,android:roundIcon">
         <activity
             android:name=".activitys.CashRigisterMainActivity"
-            android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize|stateHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

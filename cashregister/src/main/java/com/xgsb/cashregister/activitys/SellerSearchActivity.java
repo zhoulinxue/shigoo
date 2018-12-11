@@ -63,7 +63,7 @@ public class SellerSearchActivity extends MvpActivity<SellerListPresenter> imple
     @Override
     protected void onCreateView() {
         ButterKnife.bind(this);
-        mKeySearchEdite.setIconResource(R.mipmap.icon_seach);
+        mKeySearchEdite.setIconResource(R.mipmap.cashregister_icon_seach);
         LinearLayoutManager manager = new LinearLayoutManager(this);
         mRecycerView.setLayoutManager(manager);
         mSellerAdapter = new SellerListAdapter(R.layout.cashregister_seller_list_item_layou, mList);

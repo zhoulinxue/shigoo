@@ -160,6 +160,9 @@
     <item name="cashregister_dialog_title" type="id" />
     <item name="cashregister_dialog_content_iv" type="id" />
     <item name="cashregister_tabLayout" type="id" />
+    <item name="cashregister_radioGroup_sex_id" type="id" />
+    <item name="cashregister_dialog_content" type="id" />
+
 
 
 

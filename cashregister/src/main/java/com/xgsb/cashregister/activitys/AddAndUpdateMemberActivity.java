@@ -309,13 +309,13 @@ public class AddAndUpdateMemberActivity extends MvpActivity<MemberMsgPresenter> 
     private void setCardType(int i) {
         mCardType = i;
         if (i == 1) {
-            entityCardFlase.setTextColor(getResources().getColor(R.color.menber_num_decript_color));
+            entityCardFlase.setTextColor(getResources().getColor(R.color.cashregister_menber_num_decript_color));
             entityCardFlase.setBackgroundResource(R.drawable.cashregister_card_level_bg);
             mEntityCardTrue.setTextColor(getResources().getColor(R.color.colorAccent));
             mEntityCardTrue.setBackgroundResource(R.drawable.cashregister_card_level_bg_selected);
             cardNumberlayout.setVisibility(View.VISIBLE);
         } else {
-            mEntityCardTrue.setTextColor(getResources().getColor(R.color.menber_num_decript_color));
+            mEntityCardTrue.setTextColor(getResources().getColor(R.color.cashregister_menber_num_decript_color));
             mEntityCardTrue.setBackgroundResource(R.drawable.cashregister_card_level_bg);
             entityCardFlase.setTextColor(getResources().getColor(R.color.colorAccent));
             entityCardFlase.setBackgroundResource(R.drawable.cashregister_card_level_bg_selected);
@@ -326,12 +326,12 @@ public class AddAndUpdateMemberActivity extends MvpActivity<MemberMsgPresenter> 
     private void setSex(int i) {
         mSexType = i;
         if (i == 1) {
-            mLadyTv.setTextColor(getResources().getColor(R.color.menber_num_decript_color));
+            mLadyTv.setTextColor(getResources().getColor(R.color.cashregister_menber_num_decript_color));
             mLadyTv.setBackgroundResource(R.drawable.cashregister_card_level_bg);
             mManTv.setTextColor(getResources().getColor(R.color.colorAccent));
             mManTv.setBackgroundResource(R.drawable.cashregister_card_level_bg_selected);
         } else {
-            mManTv.setTextColor(getResources().getColor(R.color.menber_num_decript_color));
+            mManTv.setTextColor(getResources().getColor(R.color.cashregister_menber_num_decript_color));
             mManTv.setBackgroundResource(R.drawable.cashregister_card_level_bg);
             mLadyTv.setTextColor(getResources().getColor(R.color.colorAccent));
             mLadyTv.setBackgroundResource(R.drawable.cashregister_card_level_bg_selected);

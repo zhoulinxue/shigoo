@@ -22,6 +22,7 @@ import android.widget.TextView;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.xgsb.cashregister.R;
+import com.xgsb.cashregister.R2;
 import com.xgsb.cashregister.adapter.CardListAdapter;
 import com.xgsb.cashregister.mvp.contacts.AddCardContact;
 import com.xgsb.cashregister.mvp.presenter.AddCardPresenter;
@@ -48,25 +49,25 @@ import butterknife.ButterKnife;
  * Date: 2018-11-30 13:35
  */
 public class AddCardFragment extends MvpFragment<AddCardPresenter> implements AddCardContact.view, View.OnClickListener, TextView.OnEditorActionListener {
-    @BindView(R.id.card_num_text)
+    @BindView(R2.id.cashregister_card_num_text)
     ClearableEditTextWithIcon mNumEdite;
-    @BindView(R.id.card_recyclerview)
+    @BindView(R2.id.cashregister_card_recyclerview)
     RecyclerView mRecyclerView;
     private List<Cardbean> mList = new ArrayList<>();
     private CardListAdapter mAdapter;
-    @BindView(R.id.card_num_radio)
+    @BindView(R2.id.cashregister_card_num_radio)
     RadioButton mSingleBtn;
-    @BindView(R.id.card_range_radio)
+    @BindView(R2.id.cashregister_card_range_radio)
     RadioButton mRangeBtn;
-    @BindView(R.id.radioGroup_sex_id)
+    @BindView(R2.id.cashregister_radioGroup_sex_id)
     RadioGroup mGroup;
-    @BindView(R.id.make_card)
+    @BindView(R2.id.cashregister_make_card)
     TextView mMakeCard;
-    @BindView(R.id.card_num_edite)
+    @BindView(R2.id.cashregister_card_num_edite)
     TextView mCardNumEdite;
-    @BindView(R.id.add_card_back_layout)
+    @BindView(R2.id.cashregister_add_card_back_layout)
     LinearLayout mBackLayout;
-    @BindView(R.id.mult_make_cards)
+    @BindView(R2.id.cashregister_mult_make_cards)
     LinearLayout mMultLayout;
 
     LinearLayout mCardlayout, mCardSucLayout;
@@ -132,7 +133,7 @@ public class AddCardFragment extends MvpFragment<AddCardPresenter> implements Ad
             @Override
             public void onItemChildClick(BaseQuickAdapter adapter, View view, int position) {
                 switch (view.getId()) {
-                    case R.id.delete_card:
+                    case R2.id.cashregister_delete_card:
                         mDeletePis = position;
                         mPresenter.deleteCard(Param.Keys.TOKEN, getToken(), Param.Keys.id, mAdapter.getData().get(position).getId() + "");
                         break;
@@ -150,10 +151,10 @@ public class AddCardFragment extends MvpFragment<AddCardPresenter> implements Ad
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
                 switch (i) {
-                    case R.id.card_range_radio:
+                    case R2.id.cashregister_card_range_radio:
                         mMultLayout.setVisibility(View.VISIBLE);
                         break;
-                    case R.id.card_num_radio:
+                    case R2.id.cashregister_card_num_radio:
                         mMultLayout.setVisibility(View.INVISIBLE);
                         break;
                 }
@@ -230,8 +231,8 @@ public class AddCardFragment extends MvpFragment<AddCardPresenter> implements Ad
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
-            case R.id.end_make_card:
-            case R.id.cancel_make_card:
+            case R2.id.cashregister_end_make_card:
+            case R2.id.cashregister_cancel_make_card:
                 if (mCardDialog != null && mCardDialog.isShowing()) {
                     mCardDialog.dismiss();
                 }
@@ -240,14 +241,14 @@ public class AddCardFragment extends MvpFragment<AddCardPresenter> implements Ad
                 mList.clear();
                 mAdapter.setNewData(mList);
                 break;
-            case R.id.make_card_con:
+            case R2.id.cashregister_make_card_con:
                 mCardlayout.setVisibility(View.VISIBLE);
                 mCardSucLayout.setVisibility(View.GONE);
                 mEntityEdite.setText("");
                 isExcute = false;
                 next();
                 break;
-            case R.id.make_card:
+            case R2.id.cashregister_make_card:
                 if (mAdapter != null && mAdapter.getData().size() != 0) {
                     mCurrentPis = -1;
                     mCardDialog = cardDialog(getContext(), this);
@@ -256,11 +257,11 @@ public class AddCardFragment extends MvpFragment<AddCardPresenter> implements Ad
                     showToast("请输入有效卡号");
                 }
                 break;
-            case R.id.jump_card_num:
+            case R2.id.cashregister_jump_card_num:
                 isExcute = false;
                 next();
                 break;
-            case R.id.add_card_back_layout:
+            case R2.id.cashregister_add_card_back_layout:
                 EventBus.getDefault().post(new FragmentEvent(ChildViewClick.MEMBER_DETAIL_BACK));
                 break;
         }
@@ -270,15 +271,15 @@ public class AddCardFragment extends MvpFragment<AddCardPresenter> implements Ad
         LayoutInflater factory = LayoutInflater.from(context);//提示框
         final View view = factory.inflate(R.layout.cashregister_add_cards_dialog, null);//这里必须是final的
         mEntityEdite = view.findViewById(R.id.editText);//获得输入框对象
-        view.findViewById(R.id.cancel_make_card).setOnClickListener(listener);
-        view.findViewById(R.id.end_make_card).setOnClickListener(listener);
-        view.findViewById(R.id.make_card_con).setOnClickListener(listener);
-        view.findViewById(R.id.jump_card_num).setOnClickListener(listener);
-        mCardlayout = view.findViewById(R.id.make_card_layout);
-        mCardSucLayout = view.findViewById(R.id.suc_layout);
+        view.findViewById(R.id.cashregister_cancel_make_card).setOnClickListener(listener);
+        view.findViewById(R.id.cashregister_end_make_card).setOnClickListener(listener);
+        view.findViewById(R.id.cashregister_make_card_con).setOnClickListener(listener);
+        view.findViewById(R.id.cashregister_jump_card_num).setOnClickListener(listener);
+        mCardlayout = view.findViewById(R.id.cashregister_make_card_layout);
+        mCardSucLayout = view.findViewById(R.id.cashregister_suc_layout);
         mEntityEdite.setInputType(InputType.TYPE_NULL);
-        mNumTv = view.findViewById(R.id.num_tv);
-        mNoticeTv = view.findViewById(R.id.num_notice_tv);
+        mNumTv = view.findViewById(R.id.cashregister_num_tv);
+        mNoticeTv = view.findViewById(R.id.cashregister_num_notice_tv);
         mEntityEdite.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView textView, int actionId, KeyEvent keyEvent) {

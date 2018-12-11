@@ -42,9 +42,9 @@ public class MemberMoneyView extends BaseCustomView {
     TextView mLast7DaysTv;
     @BindView(R2.id.cashregister_recharge_time_text)
     TextView mTimeTv;
-    @BindColor(R.color.cashregister_time_text_color)
+    @BindColor(R2.color.cashregister_time_text_color)
     int mTimeNomalc;
-    @BindColor(R.color.cashregister_member_detail_title_color)
+    @BindColor(R2.color.cashregister_member_detail_title_color)
     int mTimePressColor;
     @BindView(R2.id.cashregister_search_tv)
     TextView mSearchTv;

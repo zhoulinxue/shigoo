@@ -52,7 +52,7 @@ public class CashRigisterMainActivity extends BaseActivity {
     VerticalTabLayout mLeftTabLayout;
     private List<TabLayout.Tab> mTabs = new ArrayList<>();
     private TabLayout.Tab mTables, mTabOrders, mTabMenber, mTabBookOff, mTabPrint;
-    private final int[] mTabImgs = {R.mipmap.books, R.mipmap.orders, R.mipmap.menbers, R.mipmap.jiaoban, R.mipmap.print};
+    private final int[] mTabImgs = {R.mipmap.cashregister_books, R.mipmap.cashregister_orders, R.mipmap.cashregister_menbers, R.mipmap.cashregister_jiaoban, R.mipmap.cashregister_print};
     private final int[] mTabText = {R.string.cashregister_table, R.string.cashregister_orders, R.string.cashregister_menbers, R.string.cashregister_book_off, R.string.cashregister_print};
 
     private List<Fragment> fragments = new ArrayList<>();
@@ -83,7 +83,7 @@ public class CashRigisterMainActivity extends BaseActivity {
             public int getCount() {
                 return fragments.size();
             }
-        }, R.id.fragment_container);
+        }, R.id.cashregister_fragment_container);
         mFragmentNavigator.setDefaultPosition(0);
         mLeftTabLayout.setTabSelected(mFragmentNavigator.getCurrentPosition());
         mLeftTabLayout.getTabAt(mFragmentNavigator.getCurrentPosition()).getTitleView().setBackgroundResource(R.drawable.cash_main_left_tab_press_bg);

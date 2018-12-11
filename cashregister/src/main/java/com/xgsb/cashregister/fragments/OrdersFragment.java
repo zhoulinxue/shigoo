@@ -5,6 +5,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.xgsb.cashregister.R;
+import com.xgsb.cashregister.R2;
 import com.zx.mvplibrary.BaseFragment;
 
 import butterknife.BindView;
@@ -20,7 +21,7 @@ import static com.xgsb.cashregister.activitys.CashRigisterMainActivity.TEST;
  * Date: 2018-12-01 14:27
  */
 public class OrdersFragment extends BaseFragment {
-    @BindView(R.id.test_text)
+    @BindView(R2.id.cashregister_test_text)
     TextView testTv;
 
 
