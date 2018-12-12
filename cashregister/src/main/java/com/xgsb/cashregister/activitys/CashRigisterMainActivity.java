@@ -101,137 +101,137 @@ public class CashRigisterMainActivity extends BaseActivity {
 //        }
     }
 
-        @Override
-        protected void onInitData (Bundle savedInstanceState){
-            mFragmentNavigator.onCreate(savedInstanceState);
-        }
+    @Override
+    protected void onInitData(Bundle savedInstanceState) {
+        mFragmentNavigator.onCreate(savedInstanceState);
+    }
 
-        /**
-         * 初始化代码
-         */
-        private void initTableLayout () {
-            addTabs();
-            mLeftTabLayout.addOnTabSelectedListener(new VerticalTabLayout.OnTabSelectedListener() {
-                @Override
-                public void onTabSelected(TabView tab, int position) {
-                    for (int i = 0; i < mTabImgs.length; i++) {
-                        if (i == position) {
-                            tab.getTitleView().setBackgroundResource(R.drawable.cash_main_left_tab_press_bg);
-                            mFragmentNavigator.showFragment(position);
-                        } else {
-                            mLeftTabLayout.getTabAt(i).getTitleView().setBackground(null);
-                        }
+    /**
+     * 初始化代码
+     */
+    private void initTableLayout() {
+        addTabs();
+        mLeftTabLayout.addOnTabSelectedListener(new VerticalTabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabView tab, int position) {
+                for (int i = 0; i < mTabImgs.length; i++) {
+                    if (i == position) {
+                        tab.getTitleView().setBackgroundResource(R.drawable.cash_main_left_tab_press_bg);
+                        mFragmentNavigator.showFragment(position);
+                    } else {
+                        mLeftTabLayout.getTabAt(i).getTitleView().setBackground(null);
                     }
                 }
-
-                @Override
-                public void onTabReselected(TabView tab, int position) {
-                }
-            });
-        }
-
-        @Override
-        protected void onSaveInstanceState (Bundle outState){
-            super.onSaveInstanceState(outState);
-            mFragmentNavigator.onSaveInstanceState(outState);
-        }
-
-        /**
-         * 添加 tab
-         */
-        private void addTabs () {
-            for (int i = 0; i < mTabImgs.length; i++) {
-                TabIcon.Builder iconBuilder = new TabIcon.Builder();
-                iconBuilder.setIcon(mTabImgs[i], mTabImgs[i]);
-                iconBuilder.setIconGravity(Gravity.TOP);
-                QTabView tabView = new QTabView(this);
-                tabView.setIcon(iconBuilder.build());
-                ITabView.TabTitle.Builder titleBuilder = new ITabView.TabTitle.Builder();
-                titleBuilder.setTextColor(getResources().getColor(R.color.white), getResources().getColor(R.color.white));
-                titleBuilder.setTextSize((int) getResources().getDimension(R.dimen.cashregister_member_tabl_text_size));
-                titleBuilder.setContent(getResources().getString(mTabText[i]));
-                tabView.setTitle(titleBuilder.build());
-                FrameLayout.LayoutParams lp = new FrameLayout.LayoutParams
-                        ((int) getResources().getDimension(R.dimen.cashregister_cash_main_tab_width),
-                                (int) getResources().getDimension(R.dimen.cashregister_cash_main_tab_width));
-                lp.gravity = Gravity.CENTER;
-                tabView.getTitleView().setLayoutParams(lp);
-                tabView.getTitleView().setPadding(0, 10, 0, 10);
-                mLeftTabLayout.setTabMode(VerticalTabLayout.TAB_MODE_SCROLLABLE);
-                mLeftTabLayout.addTab(tabView);
-                addFragments(i);
             }
-            MemberDetailFragment fragment = MemberDetailFragment.newInstance();
+
+            @Override
+            public void onTabReselected(TabView tab, int position) {
+            }
+        });
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        mFragmentNavigator.onSaveInstanceState(outState);
+    }
+
+    /**
+     * 添加 tab
+     */
+    private void addTabs() {
+        for (int i = 0; i < mTabImgs.length; i++) {
+            TabIcon.Builder iconBuilder = new TabIcon.Builder();
+            iconBuilder.setIcon(mTabImgs[i], mTabImgs[i]);
+            iconBuilder.setIconGravity(Gravity.TOP);
+            QTabView tabView = new QTabView(this);
+            tabView.setIcon(iconBuilder.build());
+            ITabView.TabTitle.Builder titleBuilder = new ITabView.TabTitle.Builder();
+            titleBuilder.setTextColor(getResources().getColor(R.color.white), getResources().getColor(R.color.white));
+            titleBuilder.setTextSize((int) getResources().getDimension(R.dimen.cashregister_member_tabl_text_size));
+            titleBuilder.setContent(getResources().getString(mTabText[i]));
+            tabView.setTitle(titleBuilder.build());
+            FrameLayout.LayoutParams lp = new FrameLayout.LayoutParams
+                    ((int) getResources().getDimension(R.dimen.cashregister_cash_main_tab_width),
+                            (int) getResources().getDimension(R.dimen.cashregister_cash_main_tab_width));
+            lp.gravity = Gravity.CENTER;
+            tabView.getTitleView().setLayoutParams(lp);
+            tabView.getTitleView().setPadding(0, 10, 0, 10);
+            mLeftTabLayout.setTabMode(VerticalTabLayout.TAB_MODE_SCROLLABLE);
+            mLeftTabLayout.addTab(tabView);
+            addFragments(i);
+        }
+        MemberDetailFragment fragment = MemberDetailFragment.newInstance();
+        fragments.add(fragment);
+        AddCardFragment cardFragment = AddCardFragment.newInstance();
+        fragments.add(cardFragment);
+    }
+
+    private void addFragments(int positon) {
+        Fragment fragment = null;
+        Bundle bundle = new Bundle();
+        bundle.putString(TEST, getResources().getString(mTabText[positon]));
+        switch (positon) {
+            case 0:
+                Router router = Router.getInstance();
+                if (router.getService(TablesService.class.getSimpleName()) != null) {
+                    TablesService service = (TablesService) router.getService(TablesService.class.getSimpleName());
+                    fragment = service.getTablesFragment();
+                    if (fragment != null) {
+                        fragment.setArguments(bundle);
+                    }
+                }
+                break;
+            case 1:
+                fragment = OrdersFragment.newInstance();
+                break;
+            case 2:
+                fragment = MemberMainFragment.newInstance();
+                break;
+            case 3:
+                fragment = BooksOffFragment.newInstance();
+                break;
+            case 4:
+                fragment = PrintFragment.newInstance();
+                break;
+
+        }
+        if (fragment != null) {
+            fragment.setArguments(bundle);
             fragments.add(fragment);
-            AddCardFragment cardFragment = AddCardFragment.newInstance();
-            fragments.add(cardFragment);
-        }
-
-        private void addFragments ( int positon){
-            Fragment fragment = null;
-            Bundle bundle = new Bundle();
-            bundle.putString(TEST, getResources().getString(mTabText[positon]));
-            switch (positon) {
-                case 0:
-                    Router router = Router.getInstance();
-                    if (router.getService(TablesService.class.getSimpleName()) != null) {
-                        TablesService service = (TablesService) router.getService(TablesService.class.getSimpleName());
-                        fragment = service.getTablesFragment();
-                        if(fragment!=null){
-                            fragment.setArguments(bundle);
-                        }
-                    }
-                    break;
-                case 1:
-                    fragment = OrdersFragment.newInstance();
-                    break;
-                case 2:
-                    fragment = MemberMainFragment.newInstance();
-                    break;
-                case 3:
-                    fragment = BooksOffFragment.newInstance();
-                    break;
-                case 4:
-                    fragment = PrintFragment.newInstance();
-                    break;
-
-            }
-            if (fragment != null) {
-                fragment.setArguments(bundle);
-                fragments.add(fragment);
-            }
-        }
-
-        @Override
-        public void onSuccess (Object object){
-
-        }
-
-        @Override
-        public String getToken () {
-            return null;
-        }
-
-        @Subscribe(sticky = true, threadMode = ThreadMode.MAIN)
-        public void OnClick (FragmentEvent fragmentEvent){
-            switch (fragmentEvent.getEvent()) {
-                case MEMBER_DETAIL:
-                    Member member = (Member) JSONManager.getInstance().parseObject(fragmentEvent.getParams()[0], Member.class);
-                    ((MemberDetailFragment) fragments.get(5)).updateId(member.getId() + "");
-                    mFragmentNavigator.showFragment(5);
-                    break;
-                case MEMBER_DETAIL_BACK:
-                    mFragmentNavigator.showFragment(2);
-                    break;
-                case CARD_FRAGMENT:
-                    mFragmentNavigator.showFragment(6);
-                    break;
-            }
-        }
-
-        @Override
-        protected void onDestroy () {
-            super.onDestroy();
-            EventBus.getDefault().unregister(this);
         }
     }
+
+    @Override
+    public void onSuccess(Object object) {
+
+    }
+
+    @Override
+    public String getToken() {
+        return null;
+    }
+
+    @Subscribe(sticky = true, threadMode = ThreadMode.MAIN)
+    public void OnClick(FragmentEvent fragmentEvent) {
+        switch (fragmentEvent.getEvent()) {
+            case MEMBER_DETAIL:
+                Member member = (Member) JSONManager.getInstance().parseObject(fragmentEvent.getParams()[0], Member.class);
+                ((MemberDetailFragment) fragments.get(5)).updateId(member.getId() + "");
+                mFragmentNavigator.showFragment(5);
+                break;
+            case MEMBER_DETAIL_BACK:
+                mFragmentNavigator.showFragment(2);
+                break;
+            case CARD_FRAGMENT:
+                mFragmentNavigator.showFragment(6);
+                break;
+        }
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        EventBus.getDefault().unregister(this);
+    }
+}

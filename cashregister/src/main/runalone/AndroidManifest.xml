@@ -16,8 +16,8 @@
     <application
         android:name=".runalone.App"
         android:allowBackup="true"
-        android:label="@string/cashregister_app_name"
         android:icon="@mipmap/cashregister_home_pic_logo"
+        android:label="@string/cashregister_app_name"
         android:roundIcon="@mipmap/cashregister_home_pic_logo"
         android:supportsRtl="true"
         android:theme="@style/cashregister_AppTheme"
@@ -26,8 +26,15 @@
             android:name=".activitys.CashRigisterMainActivity"
             android:windowSoftInputMode="adjustResize|stateHidden">
             <intent-filter>
+                <data android:scheme="cashregister" />
+
+                <category android:name="android.intent.category.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

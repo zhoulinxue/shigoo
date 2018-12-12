@@ -17,6 +17,7 @@ import android.view.inputmethod.InputMethodManager;
 
 import com.gyf.barlibrary.BarHide;
 import com.gyf.barlibrary.ImmersionBar;
+import com.luojilab.component.componentlib.service.AutowiredService;
 import com.zx.datafactory.enu.EventBusAction;
 import com.zx.api.api.mvp.BaseView;
 import com.zx.api.api.app.MvpDialog;
@@ -49,6 +50,7 @@ public abstract class BaseActivity extends InternationalizationActivity implemen
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         mHandler = new Handler();
         mDialog = onCreatCustomDialog();
+        AutowiredService.Factory.getSingletonImpl().autowire(this);
         //设置布局文件
         setContentView(initLayout());
         //初始化view

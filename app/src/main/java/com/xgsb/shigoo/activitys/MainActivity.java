@@ -2,7 +2,9 @@ package com.xgsb.shigoo.activitys;
 
 import android.os.Bundle;
 
+import com.luojilab.component.componentlib.router.ui.UIRouter;
 import com.luojilab.router.facade.annotation.RouteNode;
+import com.xgsb.shigoo.R;
 import com.zx.mvplibrary.BaseActivity;
 
 /**
@@ -16,12 +18,12 @@ import com.zx.mvplibrary.BaseActivity;
 public class MainActivity extends BaseActivity {
     @Override
     protected int initLayout() {
-        return 0;
+        return R.layout.router_activity;
     }
 
     @Override
     protected void onCreateView() {
-
+        goToCashRegisterWithBundle();
     }
 
     @Override
@@ -32,5 +34,11 @@ public class MainActivity extends BaseActivity {
     @Override
     public void onSuccess(Object object) {
 
+    }
+
+    private void goToCashRegisterWithBundle() {
+        Bundle bundle = new Bundle();
+        bundle.putString("bookName", "Gone with the Wind");
+        UIRouter.getInstance().openUri(this, "cashregister://cashregister/cashmain", bundle);
     }
 }

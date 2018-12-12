@@ -1,6 +1,5 @@
 package com.xgsb.shigoo;
 
-import com.luojilab.component.componentlib.router.Router;
 import com.luojilab.component.componentlib.router.ui.UIRouter;
 import com.zx.api.api.utils.AppLog;
 import com.zx.mvplibrary.MvpApplication;

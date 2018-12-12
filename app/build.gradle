@@ -15,7 +15,6 @@ android {
                 arguments = [host: "app"]
             }
         }
-        vectorDrawables.useSupportLibrary = true
     }
     buildTypes {
         release {
@@ -51,7 +50,10 @@ android {
         targetCompatibility 1.8
     }
 }
-
+combuild {
+    applicationName = 'com.xgsb.shigoo.App'
+    isRegisterCompoAuto = true;
+}
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     testImplementation 'junit:junit:4.12'

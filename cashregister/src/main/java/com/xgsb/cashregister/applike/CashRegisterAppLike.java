@@ -4,6 +4,11 @@ import com.luojilab.component.componentlib.applicationlike.IApplicationLike;
 import com.luojilab.component.componentlib.applicationlike.RegisterCompManual;
 import com.luojilab.component.componentlib.router.Router;
 import com.luojilab.component.componentlib.router.ui.UIRouter;
+import com.xgsb.cashregister.fragments.MemberDetailFragment;
+import com.xgsb.cashregister.serviceImpl.AddCardFragmentServiceImpl;
+import com.xgsb.cashregister.serviceImpl.MemberDetailFragmentServiceImpl;
+import com.zx.api.componentservice.AddCardFragmentService;
+import com.zx.api.componentservice.TablesService;
 
 
 /**
@@ -21,12 +26,14 @@ public class CashRegisterAppLike implements IApplicationLike {
     @Override
     public void onCreate() {
         mUiRouter.registerUI("cashregister");
-//        mRouter.addService(TablesService.class.getSimpleName(), new TablesFragmentServiceImpl());
+        mRouter.addService(MemberDetailFragment.class.getSimpleName(), new MemberDetailFragmentServiceImpl());
+        mRouter.addService(AddCardFragmentService.class.getSimpleName(), new AddCardFragmentServiceImpl());
     }
 
     @Override
     public void onStop() {
         mUiRouter.unregisterUI("cashregister");
-//        mRouter.removeService(TablesService.class.getSimpleName());
+        mRouter.removeService(MemberDetailFragment.class.getSimpleName());
+        mRouter.removeService(AddCardFragmentService.class.getSimpleName());
     }
 }

@@ -14,10 +14,6 @@ import com.zx.mvplibrary.MvpApplication;
  * Date: 2018-11-12 13:27
  */
 public class App extends MvpApplication {
-    @Override
-    public void onCreate() {
-        super.onCreate();
-    }
 
     @Override
     public String getApiHost() {
